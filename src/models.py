@@ -54,3 +54,11 @@ ASSET_COUNTS: dict[AssetType, int] = {
 NETWORK_ZONES: list[str] = [
     "Pukekohe", "Waiuku", "Tuakau", "Pokeno", "Clarks_Beach"
 ]
+
+@dataclass(slots=True)
+class ScoredAsset:
+    asset:          Asset
+    pof_score:      float
+    cof_score:      float
+    risk_score:     float
+    priority_tier:  PriorityTier
